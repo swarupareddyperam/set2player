@@ -9,28 +9,17 @@ class Ideone
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
+		String str;
 		Scanner sc=new Scanner(System.in);
-		String str=sc.next();
-		int count=1,max=0;
-		char c=' ';
-		int i;
-		for(i=0;i<str.length();i++)
-		{
-			for(int j=i+1;j<str.length();j++)
-			{
-				if(str.charAt(i)==str.charAt(j))
-				{
-					count++;
-				}
-				if(count>max)
-				{
-			          max=count;
-			     	    c=str.charAt(i);
-        
-				}
+		str=sc.nextLine();
+		char[] a=str.toCharArray();
+                char d=' ';
+		for(int i=0;i<a.length-1;i++){  
+			if(a[i]==a[i+1]){
+			d=a[i+1];
 			}
 		}
-		System.out.println(c);
 		
+		System.out.print(d);
 	}
 }
